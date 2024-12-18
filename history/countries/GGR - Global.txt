@@ -1,0 +1,88 @@
+﻿capital = 5 ##Наша столица
+
+oob = "GGR_1936" ##GGR - Тег
+
+set_research_slots = 5 #Количество ячеек исследования
+
+# Технологии, какие будут открыты при старте
+set_technology = {
+
+	# Infantry
+	interwar_artillery = 1
+	interwar_antitank = 1
+	infantry_weapons2 = 1
+	improved_infantry_weapons = 1
+	support_weapons = 1
+	support_weapons2 = 1
+	paratroopers = 1
+
+	# Doctrines
+	delay = 1
+	elastic_defence = 1
+	armored_spearhead = 1
+	schwerpunk = 1
+	blitzkrieg = 1
+	convoy_interdiction_ti = 1
+	unrestricted_submarine_warfare = 1
+	raider_patrols = 1
+
+	# Air
+	formation_flying = 1		
+	dive_bombing = 1
+	direct_ground_support = 1
+
+	# Electronics
+	electronic_mechanical_engineering = 1
+	radio = 1
+	cavity_magnatron = 1
+	mechanical_computing = 1
+	computing_machine = 1
+	basic_encryption = 1
+	basic_decryption = 1
+
+	# Industry
+	basic_machine_tools = 1
+	improved_machine_tools = 1
+	advanced_machine_tools = 1
+	oil_processing = 1
+	fuel_refining2 = 1
+	construction1 = 1
+	construction2 = 1
+	construction3 = 1
+	construction4 = 1
+	dispersed_industry = 1
+	dispersed_industry2 = 1
+	dispersed_industry3 = 1
+	dispersed_industry4 = 1
+	basic_fortification_tech = 1
+
+}
+
+set_autonomy = {
+	target = SL1
+	autonomous_state = autonomy_puppet
+}
+
+set_autonomy = {
+	target = CHZ
+	autonomous_state = autonomy_puppet
+}
+
+recruit_character = GER_adolf_hitler
+
+
+set_politics = {
+	ruling_party = fascism ##Рулевая партия
+	last_election = "1936.1.1" ##Последние выборы (если есть)
+	election_frequency = 48 ##Через сколько проводят выборы
+	elections_allowed = no ##Есть ли выборы
+}
+
+set_popularities = {
+	liberalism = 0
+	fascism = 100
+	communism = 0
+	neutrality = 0
+	nationalism = 0
+	socialism = 0
+}

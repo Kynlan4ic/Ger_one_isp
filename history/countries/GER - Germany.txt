@@ -1,0 +1,440 @@
+﻿#########################################################################
+# Germany
+#########################################################################
+capital = 855 #Berlin
+set_stability = 0.50
+set_war_support = 0.3
+oob = "ger_1936"
+set_research_slots = 5
+set_convoys = 200
+#######################
+# Language
+#######################
+set_country_flag = german_language #Not actually rebuilt, im just bad at naming stuff
+set_global_flag = munich_rebuilt
+set_global_flag = berlin_rebuilt
+set_global_flag = nuremberg_rebuilt
+set_global_flag = hamburg_rebuilt
+set_global_flag = frankfurt_rebuilt
+set_global_flag = game_starto
+set_country_flag = FLAG_GERMAN_LEADER
+set_country_flag = NEWS_EVENTS_EUROPE_FLAG
+set_country_flag = NEWS_EVENTS_PERMANENT_EUROPE_FLAG
+#######################
+# Research
+#######################
+set_technology = {
+	
+}
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	add_to_tech_sharing_group = nato_research
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_intelligence_agency = yes
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+}
+	set_technology = {
+		naval_stipulations = 1
+		ww2_destroyer = 1
+		basic_destroyer = 1
+		ww2_cruiser = 1
+		basic_cruiser = 1
+		ww2_submarine = 1
+		basic_submarine = 1
+		ww2_carrier = 1
+		transport = 1
+		ww2_battleship = 1
+	}
+	create_equipment_variant = { 
+		name = "Bismarck Class" 
+		type = battleship_1 
+		upgrades = { 
+			ship_reliability_upgrade = 1
+			ship_engine_upgrade = 2
+			ship_gun_upgrade = 5
+			ship_armor_upgrade = 1
+		}
+	}
+	create_equipment_variant = { 
+		name = "Hinderburg Class" 
+		type = battleship_1 
+		upgrades = { 
+			ship_reliability_upgrade = 3
+			ship_engine_upgrade = 3
+			ship_gun_upgrade = 4
+			ship_armor_upgrade = 2
+		}
+	}
+	create_equipment_variant = { 
+		name = "P-Class" 
+		type = light_cruiser_2
+		upgrades = { 
+			ship_reliability_upgrade = 3
+			ship_engine_upgrade = 2
+			ship_gun_upgrade = 3
+			ship_anti_air_upgrade = 1
+		}
+	}
+	create_equipment_variant = { 
+		name = "Admiral Hipper Class" 
+		type = light_cruiser_2
+		upgrades = { 
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 1
+			ship_gun_upgrade = 1
+			ship_anti_air_upgrade = 1
+		}
+	}
+	create_equipment_variant = { 
+		name = "Leipzig Class" 
+		type = light_cruiser_2
+		upgrades = { 
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_gun_upgrade = 2
+			ship_anti_air_upgrade = 1
+		}
+	}
+	create_equipment_variant = { 
+		name = "O-Class" 
+		type = light_cruiser_2
+		upgrades = { 
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_gun_upgrade = 4
+			ship_anti_air_upgrade = 1
+		}
+	}
+	create_equipment_variant = { 
+		name = "Zerstörer 1936A" 
+		type = destroyer_1
+		upgrades = { 
+			ship_torpedo_upgrade = 1
+			destroyer_engine_upgrade = 1
+			ship_ASW_upgrade = 0
+			ship_anti_air_upgrade = 0
+		}
+	}
+	create_equipment_variant = { 
+		name = "Zerstörer 1936B" 
+		type = destroyer_1
+		upgrades = { 
+			ship_torpedo_upgrade = 1
+			destroyer_engine_upgrade = 1
+			ship_ASW_upgrade = 0
+			ship_anti_air_upgrade = 0
+		}
+	}
+	create_equipment_variant = { 
+		name = "Zerstörer 1944" 
+		type = destroyer_1
+		upgrades = { 
+			ship_torpedo_upgrade = 1
+			destroyer_engine_upgrade = 2
+			ship_ASW_upgrade = 1
+			ship_anti_air_upgrade = 0
+		}
+	}
+	create_equipment_variant = { 
+		name = "Zerstörer 1945" 
+		type = destroyer_2
+		upgrades = { 
+			ship_torpedo_upgrade = 0
+			destroyer_engine_upgrade = 1
+			ship_ASW_upgrade = 0
+			ship_anti_air_upgrade = 0
+		}
+	}
+	create_equipment_variant = { 
+		name = "Type IXC" 
+		type = submarine_1
+		upgrades = { 
+			ship_reliability_upgrade = 2
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+	}
+	create_equipment_variant = { 
+		name = "Type XVIIB" 
+		type = submarine_1
+		upgrades = { 
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 0
+			sub_stealth_upgrade = 0
+			sub_torpedo_upgrade = 0
+		}
+	}
+
+	set_naval_oob = "GER_1952_naval_legacy"
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		
+	}
+
+	#cruiser#
+	create_equipment_variant = {
+		name = "Admiral Hipper Class"				
+		type = ship_hull_cruiser_1
+		name_group = GER_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_airplane_launcher_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Leipzig Class"				
+		type = ship_hull_cruiser_1
+		name_group = GER_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_airplane_launcher_1
+		}
+	}
+	create_equipment_variant = {
+		name = "P-Class"				
+		type = ship_hull_cruiser_1
+		name_group = GER_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_airplane_launcher_1
+		}
+	}
+	create_equipment_variant = {
+		name = "O-Class"				
+		type = ship_hull_cruiser_2
+		name_group = GER_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = ship_radar_1
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = ship_airplane_launcher_1
+		}
+	}
+
+	# carriers #
+	create_equipment_variant = {
+		name = "Graf Zeppelin Class"
+		type = ship_hull_carrier_1
+		name_group = GER_CV_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_deck_slot_1 = ship_deck_space
+			fixed_ship_deck_slot_2 = ship_deck_space
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = carrier_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			front_1_custom_slot = ship_deck_space
+		}
+	}
+
+	#Destroyer#
+	create_equipment_variant = {
+		name = "Zerstörer 1936A"				
+		type = ship_hull_light_1
+		name_group = GER_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_depth_charge_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Zerstörer 1936B"				
+		type = ship_hull_light_1
+		name_group = GER_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_depth_charge_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Zerstörer 1944"				
+		type = ship_hull_light_1
+		name_group = GER_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_depth_charge_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Zerstörer 1945"				
+		type = ship_hull_light_2
+		name_group = GER_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = ship_radar_1
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_2
+			mid_1_custom_slot = ship_depth_charge_2
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+	# Submarines #
+	create_equipment_variant = {
+		name = "Type IXC"				
+		type = ship_hull_submarine_1
+		name_group = GER_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_mine_layer_sub
+		}
+	}
+	create_equipment_variant = {
+		name = "Type VIIC"				
+		type = ship_hull_submarine_1
+		name_group = GER_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = ship_torpedo_sub_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Type XVIIB"				
+		type = ship_hull_submarine_2
+		name_group = GER_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = ship_torpedo_sub_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Type XXI"				
+		type = ship_hull_submarine_2
+		name_group = GER_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = ship_torpedo_sub_2
+		}
+	}
+	set_naval_oob = "GER_1952_naval_MTG"
+}
+
+set_air_oob = "GER_1952_AIR" # must load air after naval if it has carrier wings
+
+#######################
+# Politics
+#######################
+set_politics = {
+	ruling_party = national_socialist
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	liberalism = 0
+	fascist = 100
+}
+
+set_country_flag = german_and_germanrk
+set_country_flag = noone_picked
+
+set_variable = { var = speerpower value = 0 }
+set_variable = { var = bormannpower value = 0.4 }
+set_variable = { var = himmlerpower value = 0.4 }
+set_variable = { var = goebbelspower value = 0.1 }
+set_variable = { var = goeringpower value = 0.6 }
+set_variable = { peoples_germany_support  = 0 }
+
+set_variable = { var = speertrust value = 2 }
+set_variable = { var = bormanntrust value = 1 }
+set_variable = { var = himmlertrust value = 1 }
+set_variable = { var = goebbelstrust value = 1 }
+set_variable = { var = goeringtrust value = 0 }
+
+set_variable = { var = airvictory value = 0 }
+set_variable = { var = airdefeats value = 0 }
+set_variable = { var = counterterror value = 0 }
+#######################
+# Diplomacy
+#######################
+create_faction = "Neue Ordnung"
+add_to_faction = GER

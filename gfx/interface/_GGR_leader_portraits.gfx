@@ -1,0 +1,6 @@
+spriteType = {
+spriteType = {
+	name = "GFX_portrait_GGR_adolfhitler"
+	texturefile = "gfx/leaders/GGR/portrait_GGR_adolfhitler.dds"
+	}
+}
